@@ -17,3 +17,6 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * How to integrate an audio file in a webpage
 * How to embed external content
 * How to correctly structure an HTML page
+
+### Wireframe of Techium project
+![Techium](https://lh3.googleusercontent.com/pw/AM-JKLUBivKBwwIxWw7KWLtTIpfNMMvUMwBEzDxH9P8pMLrVK6mXI72dGurO7B9Nyp9z8-jfPzKawqdqrn-e6YWrrois4p3e54sW56aqyl4cey90gkgmd806rmAt5XuweCabL53R5wCSrG_34ZvPrRtJB38=w457-h1263-no)
