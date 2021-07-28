@@ -96,6 +96,12 @@ html {
   font-size: 62.5%;
 }
 
+[data-section-theme=“dark”]{
+  color: var(--color-white);
+  --section-title-color: var(--color-white);
+  background-color: var(--color-black);
+}
+
 /* Body elements */
 body {
   color: var(--text-color);
@@ -244,10 +250,4 @@ ul.row {
 
 .footer ul {
   text-align: right;
-}
-
-[data-section-theme=“dark”]{
-    color: var(--color-white);
-    --section-title-color: var(--color-white);
-    background-color: var(--color-black);
 }
