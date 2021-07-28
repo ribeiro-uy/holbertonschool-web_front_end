@@ -1,0 +1,27 @@
+/* Html elements */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body elements */
+body {
+  color: #161616;
+}
+
+/* Anchor elements */
+a {
+  color: #161616;
+}
+
+/* Classes targeting */
+.visually-hidden {
+  display: none;
+}
+
+.card-category {
+  color: #d73953;
+}
+
+.section-tagline {
+  color: #d73953;
+}
