@@ -85,7 +85,7 @@ template{display: none;} /* prettier-ignore */
 }
 
 /* All elements */
-* {
+*, *:before, *:after {
   box-sizing: border-box;
 }
 
