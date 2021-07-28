@@ -213,7 +213,7 @@ ul.row {
 
 /* CSS rule that creates a new row after each instance of the class row */
 .row::after {
-  content: none;
+  content: "";
   display: table;
   clear: both;
 }
