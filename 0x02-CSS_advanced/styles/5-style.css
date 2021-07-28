@@ -32,9 +32,8 @@ body {
 }
 
 /* Headings elements */
-/* The :is() CSS pseudo-class function takes a selector list as its argument */
-:is(h1, h2, h3, h4, h5, h6) {
-  font-family: var(--font-family-title);
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-family-title);
 }
 
 /* Anchor elements */
