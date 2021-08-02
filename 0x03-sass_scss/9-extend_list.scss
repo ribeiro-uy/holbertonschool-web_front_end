@@ -1,0 +1,17 @@
+%fontSize {
+  font-size: 12px;
+}
+
+.info {
+  @extend %fontSize;
+}
+
+.success {
+  color: #00ff00;
+  @extend %fontSize;
+}
+
+.warning {
+  color: #ff0000;
+  @extend %fontSize;
+}
