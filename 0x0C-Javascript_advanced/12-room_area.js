@@ -5,6 +5,5 @@ let roomDimensions = {
         let surface = this.width * this.length;
         return surface;
     }
-
 };
 let boundGetArea = roomDimensions.getArea.bind(roomDimensions);

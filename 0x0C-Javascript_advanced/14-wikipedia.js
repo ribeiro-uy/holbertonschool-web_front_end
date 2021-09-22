@@ -1,17 +1,17 @@
-function createElement(data){
+function createElement(data) {
     let element = document.getElementsByTagName('body')[0];
 
     let p = document.createElement('p');
-    let text = document.createTextNode(data); 
+    let text = document.createTextNode(data);
 
     p.appendChild(text);
     element.appendChild(p);
 }
 
-function queryWikipedia(callback){
+function queryWikipedia(callback) {
     let req = new XMLHttpRequest();
-    req.onreadystatechange = function(){
-        if(this.readyState == 4 && this.status == 200) {
+    req.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
             callback(this.responseText);
         }
     };
