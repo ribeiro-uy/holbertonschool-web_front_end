@@ -1,12 +1,12 @@
-globalVariable = "Welcome";
+globalVariable = 'Welcome';
 function outer() {
     alert(globalVariable);
-    course = "Holberton";
+    course = 'Holberton';
     function inner() {
-        alert(globalVariable + " " + course);
-        exclamation = "!";
+        alert(globalVariable + ' ' + course);
+        exclamation = '!';
         function inception() {
-            alert(globalVariable + " " + course + exclamation);
+            alert(globalVariable + ' ' + course + exclamation);
         }
         inception();
     }

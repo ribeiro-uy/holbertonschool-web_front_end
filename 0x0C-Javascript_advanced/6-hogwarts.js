@@ -5,24 +5,24 @@ class studentHogwarts {
     #changeScoreBy(points) {
         this.privateScore += points;
     }
-    setName(newName){
+    setName(newName) {
         this.#name = newName;
     }
-    rewardStudent(){
+    rewardStudent() {
         this.#changeScoreBy(1);
     }
-    penalizeStudent(){
+    penalizeStudent() {
         this.#changeScoreBy(-1);
     }
-    getScore(){
-        return this.#name + ": " + this.privateScore;
+    getScore() {
+        return this.#name + ': ' + this.privateScore;
     }
 }
 
 exports = { studentHogwarts }
 
 harry = new studentHogwarts;
-harry.setName("Harry");
+harry.setName('Harry');
 harry.rewardStudent();
 harry.rewardStudent();
 harry.rewardStudent();
@@ -30,7 +30,7 @@ harry.rewardStudent();
 console.log(harry.getScore());
 
 draco = new studentHogwarts;
-draco.setName("Draco");
+draco.setName('Draco');
 draco.rewardStudent();
 draco.penalizeStudent();
 draco.penalizeStudent()
