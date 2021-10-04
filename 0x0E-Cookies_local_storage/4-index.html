@@ -1,0 +1,71 @@
+<html lang="en" dir="ltr">
+    <head>
+        <script
+            src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"
+            integrity="sha256-0H3Nuz3aug3afVbUlsu12Puxva3CP4EhJtPExqs54Vg="crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+        <div id="form">
+            <h2>Login to the website</h2>
+            <input id="firstname" placeholder="Firstname" type="text" />
+            <input id="email" placeholder="Email" type="text" />
+            <button onclick="setCookiesAndShowWelcomeMessage()">Log me in</button>
+        </div>
+        <script>
+            function deleteCookiesAndShowForm() {
+                Cookies.remove('firstname');
+                Cookies.remove('email');
+                document.getElementById('welcome').remove();
+                showForm();
+            }
+
+            function setCookiesAndShowWelcomeMessage() {
+                const firstname = document.getElementById('firstname').value;
+                const email = document.getElementById('email').value;
+                Cookies.set('firstname', firstname, { expires: 10 });
+                Cookies.set('email', email, { expires: 10 });
+                showWelcomeMessageOrForm();
+            }
+
+            function showCookies() {
+                const firstname = Cookies.get('firstname');
+                const email = Cookies.get('email');
+                const p = document.createElement('p');
+                p.innerHTML = 'Email: ' + email + ' - Firstname: ' + firstname;
+                document.body.append(p);
+            }
+
+            function showForm() {
+                document.getElementById('form').style.display = 'block';
+            }
+
+            function hideForm() {
+                document.getElementById('form').style.display = 'none';
+            }
+
+            function showWelcomeMessageOrForm() {
+                const firstname = Cookies.get('firstname');
+                const email = Cookies.get('email');
+                if (firstname && email) {
+                    hideForm();
+                    const h1 = document.createElement('h1');
+                    h1.innerText = "Welcome " + firstname + ' ';
+                    h1.setAttribute('id', 'welcome');
+                    const link = document.createElement('a');
+                    link.innerText = '(logout)';
+                    link.style.fontStyle = 'italic';
+                    link.style.fontWeight = 'normal';
+                    link.addEventListener('click', deleteCookiesAndShowForm);
+                    h1.append(link);
+                    document.body.append(h1);
+                } 
+                else {
+                    showForm();
+                }
+            }
+
+            showWelcomeMessageOrForm();
+        </script>
+    </body>
+</html>
